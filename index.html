@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Personal Expense Tracker</h1>
+
+        <div class="expense-form">
+
+            <h2>Add Expense</h2>
+
+            <input type="text" id="description" placeholder="Expense description">
+
+            <input type="number" id="amount" placeholder="Amount">
+
+            <select id="category">
+                <option value="">Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Education">Education</option>
+                <option value="Bills">Bills</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input type="date" id="date">
+
+            <button onclick="addExpense()">Add Expense</button>
+
+        </div>
+
+        <div class="total">
+            <h2>Total Expenses</h2>
+            <p>₹<span id="totalAmount">0</span></p>
+        </div>
+
+        <div class="search">
+            <h2>Search Expenses</h2>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search expenses..."
+                onkeyup="searchExpenses()"
+            >
+        </div>
+
+        <div class="expense-list">
+
+            <h2>Expense List</h2>
+
+            <div id="expenseList">
+                <p>No expenses added yet.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
